@@ -5,31 +5,55 @@
 **기간**: 4개월 (2026-03 ~ 2026-06)
 **난이도**: ⭐⭐⭐⭐ (높음)
 
-## 📚 학습 구조
+## 📚 학습 구조 & 진행 상황
 
-### Phase 0: C++ 기초 (Week 1-4)
-- [ ] 포인터 & 메모리 관리
-- [ ] STL 컨테이너 (vector, map, set)
-- [ ] RAII 패턴
-- [ ] 스마트 포인터 (unique_ptr, shared_ptr)
+### 🎓 Level 1: Elementary (Week 1-4) - ✅ **완료**
+**목표**: C++ 기초 문법 & 메모리 관리 마스터 (500 → 2,000줄)
 
-### Phase 1: MLIR C++ API (Week 5-8)
-- [ ] MLIR 아키텍처 이해
-- [ ] Op, Dialect, Pass 개념
-- [ ] C++ API 실습
-- [ ] 간단한 Dialect 작성
+- [x] **Week 1**: 포인터, 클래스, 연산자 오버로딩 → Sorting 프로젝트
+- [x] **Week 2**: RAII 패턴, 스마트 포인터 (unique_ptr, shared_ptr) → SafeSorter
+- [x] **Week 3**: 템플릿, 람다, STL 컨테이너 → GenericSorter
+- [x] **Week 4**: 예외 처리, constexpr, 최종 정렬 라이브러리 → 완전 통합
 
-### Phase 2: 핵심 알고리즘 포팅 (Week 9-16)
-- [ ] Hierarchical AllReduce (C++)
-- [ ] Auto-sharding optimizer
-- [ ] Task graph scheduler
-- [ ] Topology-aware routing
+**성과**: 7,640줄 학습 자료 + 완전한 정렬 라이브러리 구현
 
-### Phase 3: 성능 최적화 (Week 17+)
+---
+
+### 🔧 Level 2: Junior (Week 5-8) - ✅ **완료**
+**목표**: MLIR C++ API 마스터, Dialect 설계 & Pass 프레임워크 (1,500 → 5,000줄)
+
+- [x] **Week 5**: MLIR 아키텍처, Context, Builder, Hello World
+- [x] **Week 6**: Dialect 설계, 6개 커스텀 Operation (TableGen)
+- [x] **Week 7**: Pass 프레임워크, 4개 최적화 Pass (ConstFold, Fusion, DCE, MemOpt)
+- [x] **Week 8**: 통합 프로젝트 - 완전 SimpleDSL 컴파일러 (~3,800줄)
+
+**성과**: 5,377줄 학습 자료 + SimpleDSL 완전 구현 + 10+ 통합 테스트
+
+---
+
+### 🎯 Level 3: University (Week 9-12) - ⏳ **예정**
+**목표**: Python 알고리즘 포팅, 병렬화 감지 (5,000 → 7,500줄)
+
+- [ ] **Week 9-10**: Task Graph 구현 (DAG, 위상 정렬, 병렬화 감지)
+- [ ] **Week 11-12**: Topology Aware Scheduler (네트워크 토폴로지, 통신 최적화)
+
+---
+
+### 🚀 Level 4: Graduate (Week 13-16) - ⏳ **예정**
+**목표**: 고성능 최적화, 1000배 성능 개선 (7,500 → 8,000+줄)
+
+- [ ] **Week 13-14**: Weighted Sharding (이기종 GPU, 로드 밸런싱)
+- [ ] **Week 15-16**: Hierarchical AllReduce (계층적 통신, 비용 최적화)
+
+---
+
+### 📊 성능 최적화 (Week 17+) - ⏳ **예정**
+**목표**: 프로덕션 배포 (1075ms → 10ms/iter, 100배 향상)
+
+- [ ] SIMD 최적화 (SSE, AVX)
 - [ ] 병렬화 (OpenMP, TBB)
-- [ ] 메모리 최적화
-- [ ] 벤치마킹
-- [ ] 프로덕션 배포
+- [ ] 메모리 풀 & 캐시 최적화
+- [ ] 벤치마킹 & 프로파일링
 
 ## 🎯 최종 목표
 
@@ -40,6 +64,45 @@
 
 ---
 
+---
+
+## 📈 진행 통계
+
+| 레벨 | 주차 | 주제 | 학습 자료 | 프로젝트 | 상태 |
+|------|------|------|---------|---------|------|
+| Elementary | 1-4 | C++ 기초 & 메모리 | 7,640줄 | 정렬 라이브러리 | ✅ |
+| Junior | 5-8 | MLIR API & Dialect | 5,377줄 | SimpleDSL 컴파일러 | ✅ |
+| University | 9-12 | 알고리즘 포팅 | TBD | Task Graph + Scheduler | ⏳ |
+| Graduate | 13-16 | 고성능 최적화 | TBD | AllReduce 최적화 | ⏳ |
+
+**총 진행도**: 50% (Level 1-2 완료, Level 3-4 진행 예정)
+**총 학습 자료**: 13,017줄 (목표: 20,000줄+)
+
+---
+
+## 🎯 주요 성과
+
+### Level 1: Elementary (완료)
+- ✅ C++ 핵심 개념 완전 습득
+- ✅ 메모리 안전성 (RAII, 스마트 포인터)
+- ✅ 4가지 정렬 알고리즘 구현
+- ✅ 1,430줄 학습 자료 추가
+
+### Level 2: Junior (완료)
+- ✅ MLIR 핵심 개념 마스터
+- ✅ 6개 커스텀 Operation 정의
+- ✅ 4개 최적화 Pass 구현
+- ✅ 완전 SimpleDSL 컴파일러 (~3,800줄)
+- ✅ 10+ 통합 테스트 & 벤치마크
+- ✅ 1,737줄 학습 자료 추가
+
+### 다음 목표
+- Level 3: Task Graph 구현 (병렬화 감지)
+- Level 4: AllReduce 최적화 (1000배 성능)
+
+---
+
 **저장소**: https://gogs.dclub.kr/kim/mlir-cpp-learning.git
-**상태**: 🚀 Starting
+**상태**: 🔄 In Progress (Level 1-2 완료, Level 3-4 진행 예정)
 **생성일**: 2026-02-27
+**마지막 업데이트**: 2026-02-27
